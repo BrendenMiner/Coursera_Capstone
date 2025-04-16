@@ -65,7 +65,6 @@ const BookingForm = ({ availableTimes, dispatch }) => {
               aria-label="On Change"
               onChange={(e) => {
                 setBookings({ ...bookings, date: e.target.value });
-                // new Date (e.target.value),  date argument on fetchAPI function can access .getDate() and set availableTimes different based on a given Date
                 dispatch({
                   type: "UPDATE_TIMES",
                   date: new Date(e.target.value),
